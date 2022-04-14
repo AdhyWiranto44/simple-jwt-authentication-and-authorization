@@ -13,10 +13,15 @@ app.use(express.static("public"))
 app.set("view engine", "ejs")
 
 app.get("/", (req, res) => {
-  if (req.cookies["X-ADHY-TOKEN"]) {
+  const token = req.cookies["X-ADHY-TOKEN"]
+  
+  if (!token) return res.redirect("/login")
+
+  try {
+    jwt.verify(token, SECRET)
     res.render("index")
-  } else {
-    res.redirect("/login")
+  } catch (err) {
+    res.redirect("/logout")
   }
 })
 
