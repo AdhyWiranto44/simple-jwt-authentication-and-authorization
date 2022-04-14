@@ -5,9 +5,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello Adhy</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      height: 100vh;
+      background: #76b852; /* fallback for old browsers */
+      background: rgb(141,194,111);
+      background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%);
+      font-family: "Roboto", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale; 
+    }
+
+    .main {
+      height: 100%;
+      display: flex;    
+      justify-content: center;   
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 5em;
+      color: white;
+    }
+
+    a {
+      font-size: 2em;
+      text-decoration: none;
+      background-color: white;
+      color: #76b852;
+      padding: 10px;
+      border-radius: 5px;
+      display: block;
+      margin-top: 20px;
+      transition: .3s;
+    }
+
+    a:hover {
+      background-color: #ccc;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello Adhy!</h1>
-  <a href="/logout">logout</a>
+  <div class="main">
+    <div class="welcome">
+      <h1>Hello Adhy!</h1>
+      <a href="/logout">logout</a>
+    </div>
+  </div>
 </body>
 </html>
